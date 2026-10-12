@@ -1,36 +1,52 @@
 # Relaxed Theme for Zed
 
-A dark theme for [Zed](https://zed.dev), ported from the popular [Relaxed](https://github.com/Relaxed-Theme/vscode-theme-relaxed/) VSCode theme.
+> A relaxed Zed theme to take a more relaxed view of things.
 
-Muted, warm tones on a deep grey background — built for long sessions without eye strain.
+A port of the [Relaxed theme for Visual Studio Code](https://github.com/Relaxed-Theme/vscode-theme-relaxed) to [Zed](https://zed.dev).
 
----
-
-## Preview
-
-<img width="2688" height="1554" alt="zed dev_theme-builder_ref=zed-themes com" src="https://github.com/user-attachments/assets/86256822-e557-4c72-9c1f-d7424f2abee1" />
-
----
+<img width="2688" height="1554" alt="Screenshot: Relaxed theme in Zed" src="https://github.com/user-attachments/assets/86256822-e557-4c72-9c1f-d7424f2abee1" />
 
 ## Installation
 
-### From the Zed Extensions Store
-
-1. Open Zed and go to **Extensions** (`cmd+shift+x` on macOS)
-2. Search for **Relaxed Theme**
+1. Open **Extensions** in Zed (`cmd-shift-x` on macOS)
+2. Search for `Relaxed`
 3. Click **Install**
-4. Open the theme picker (`cmd+k cmd+t`) and select **Relaxed**
+4. Open the theme picker (`cmd-k cmd-t`) and select **Relaxed**
 
-### Manual Installation
+## I don't like something
 
-1. Clone this repo into `~/.config/zed/themes/`:
-   ```sh
-   git clone https://github.com/stefanbc/relaxed-theme-zed ~/.config/zed/themes/relaxed-theme-zed
-   ```
-2. Restart Zed
-3. Open the theme picker (`cmd+k cmd+t`) and select **Relaxed**
+If something looks funky, please [open an issue](https://github.com/Relaxed-Theme/zed-theme-relaxed/issues).
 
----
+If you would like to change something, you can either open a PR and see if we'd like it added, or override the colors in your own `settings.json`:
+
+```json
+"theme_overrides": {
+  "Relaxed": {
+    "search.match_background": "#ebc17a40"
+  }
+}
+```
+
+<https://zed.dev/docs/themes>
+
+### Contributing
+
+#### Get up and running straight away
+
+* Fork and clone this repository
+* In Zed, open the **Extensions** page (`cmd-shift-x`), click **Install Dev Extension** and select the cloned directory
+* Open the theme picker (`cmd-k cmd-t`) and pick the »Relaxed« color theme
+
+#### Make changes
+
+* All colors live in [`themes/relaxed.json`](themes/relaxed.json)
+* After editing, click **Rebuild** next to the dev extension on the **Extensions** page to load your changes
+* Available keys are listed in the [theme schema](https://zed.dev/schema/themes/v0.2.0.json). To learn more, check out the [theme extension](https://zed.dev/docs/extensions/themes) documentation.
+
+#### Remove the dev extension
+
+* Click **Uninstall** next to the dev extension on the **Extensions** page
+* Reinstall the published **Relaxed** extension if you had it installed before
 
 ## Color Palette
 
@@ -49,8 +65,13 @@ Muted, warm tones on a deep grey background — built for long sessions without 
 | Operators | `#6a8799` |
 | Regex / Escape | `#acbbd0` |
 
----
+## Related
+
+* [Relaxed theme for Visual Studio Code](https://github.com/Relaxed-Theme/vscode-theme-relaxed) - The original.
+* [Relaxed theme for Terminal](https://github.com/Relaxed-Theme/relaxed-terminal-themes) - For iTerm, Hyper, the macOS Terminal and a bunch of others.
 
 ## License
 
-MIT — see [LICENSE](./LICENSE)
+Zed port by Stefan Cosma, original theme by Michael Kühnel.
+
+[MIT License](LICENSE)
