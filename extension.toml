@@ -1,6 +1,6 @@
 id = "relaxed-theme"
 name = "Relaxed"
-version = "0.1.0"
+version = "0.1.1"
 schema_version = 1
 authors = ["Stefan Cosma <hi@stefancosma.xyz>", "Michael Kühnel <mail@michael-kuehnel.de>"]
 description = "🕶️ A relaxed Zed theme to take a more relaxed view of things."
