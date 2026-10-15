@@ -17,8 +17,6 @@
         "editor.highlighted_line.background": "#353a4430",
         "editor.line_number": "#6363639d",
         "editor.active_line_number": "#808080",
-        "editor.selection.background": "#525968",
-        "editor.selection.border": "#52596870",
         "editor.document_highlight.read_background": "#FFFFFF0D",
         "editor.document_highlight.write_background": "#ffffff17",
         "editor.invisible": "#6363639d",
@@ -37,18 +35,11 @@
         "panel.focused_border": "#353a44",
         "pane.focused_border": "#353a44",
         "status_bar.background": "#2c3038",
-        "activity_bar.background": "#2c3038",
-        "activity_bar_badge.background": "#6a8799",
-        "activity_bar_badge.foreground": "#f7f7f7",
-        "sidebar.background": "#2a2e36",
-        "project_panel.background": "#2a2e36",
         "element.background": "#2a2e36",
         "element.hover": "#24252b",
         "element.active": "#353a44",
         "element.selected": "#24252b",
         "element.disabled": "#636363",
-        "element.placeholder": "#636363",
-        "element.drop_target": "#6a879940",
         "ghost_element.background": null,
         "ghost_element.hover": "#24252b",
         "ghost_element.active": "#353a44",
@@ -119,7 +110,7 @@
           {
             "cursor": "#d9d9d9",
             "background": "#d9d9d9",
-            "selection": "#52596870"
+            "selection": "#525968"
           }
         ],
         "terminal.background": "#353a44",
