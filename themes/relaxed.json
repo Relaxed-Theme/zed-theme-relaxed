@@ -155,6 +155,12 @@
           "constructor": {
             "color": "#6a8799"
           },
+          "diff.minus": {
+            "color": "#bc5653"
+          },
+          "diff.plus": {
+            "color": "#909d63"
+          },
           "embedded": {
             "color": "#6a8799"
           },
@@ -280,7 +286,11 @@
         "version_control.modified": "#ebc17a",
         "version_control.renamed": "#ebc17a",
         "version_control.conflict": "#b06698",
-        "version_control.ignored": "#d9d9d9"
+        "version_control.ignored": "#d9d9d9",
+        "version_control.word_added": "#909d6333",
+        "version_control.word_deleted": "#bc565340",
+        "version_control.conflict_marker.ours": "#b48ead26",
+        "version_control.conflict_marker.theirs": "#7eaac726"
       }
     }
   ]
