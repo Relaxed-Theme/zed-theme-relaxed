@@ -55,6 +55,7 @@ If you would like to change something, you can either open a PR and see if we'd 
 | Background | `#2e333b` |
 | Editor foreground | `#d9d9d9` |
 | Keywords | `#b06698` |
+| Control keywords (`if`, `return`, `import`) | `#6a8799` |
 | Functions | `#7eaac7` |
 | Strings | `#909d63` |
 | Types / Classes | `#ebc17a` |
@@ -62,6 +63,7 @@ If you would like to change something, you can either open a PR and see if we'd 
 | Tags | `#bc5653` |
 | Comments | `#727272` |
 | Variables | `#d9d9d9` |
+| Parameters | `#b06698` |
 | Operators | `#6a8799` |
 | Regex / Escape | `#acbbd0` |
 
