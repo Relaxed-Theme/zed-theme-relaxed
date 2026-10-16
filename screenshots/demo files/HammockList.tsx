@@ -1,11 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 // A calm little component to showcase the Relaxed theme
 enum Mood {
   Chill = "chill",
   Sleepy = "sleepy",
-  Focused = "focused",
 }
 
 const foo = null;
@@ -17,19 +15,15 @@ interface Hammock<T = string> {
   swinging?: boolean;
 }
 
-type Props = {
-  title: string;
-  limit?: number;
-  children?: ReactNode;
-};
+type Props = { title: string; limit?: number; children?: ReactNode };
 
 const API_URL = "https://api.example.com/hammocks";
 const SLUG_PATTERN = /^[a-z0-9-]+$/i;
 
 async function fetchHammocks(limit: number): Promise<Hammock[]> {
-  const response = await fetch(`${API_URL}?limit=${limit}`);
-  if (!response.ok) throw new Error(`Request failed: ${response.status}`);
-  return response.json();
+  const res = await fetch(`${API_URL}?limit=${limit}`);
+  if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+  return res.json();
 }
 
 export function HammockList({ title, limit = 10, children }: Props) {
@@ -39,21 +33,20 @@ export function HammockList({ title, limit = 10, children }: Props) {
   useEffect(() => {
     fetchHammocks(limit)
       .then(setItems)
-      .catch(console.error)
       .finally(() => setIsLoading(false));
   }, [limit]);
 
-  const swinging = useMemo(() => items.filter((item) => item.swinging), [items]);
+  const swinging = items.filter((item) => item.swinging);
 
   return (
     <section className="hammock-list" aria-busy={isLoading}>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       {isLoading ? (
         <p className="hint">Brewing some tea…</p>
       ) : (
         <ul>
           {items.map(({ id, label, mood }) => (
-            <li key={id} data-mood={mood} hidden={!SLUG_PATTERN.test(label)}>
+            <li key={id} hidden={!SLUG_PATTERN.test(label)}>
               {label} <small>({mood})</small>
             </li>
           ))}

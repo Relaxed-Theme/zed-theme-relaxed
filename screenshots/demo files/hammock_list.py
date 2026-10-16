@@ -44,7 +44,10 @@ def describe(mood: Mood) -> str:
 
 async def fetch_hammocks(limit: int = 10) -> list[Hammock]:
     await asyncio.sleep(0.5)  # pretend we are calling {API_URL}
-    return [Hammock(id=i, label=f"hammock-{i}", swinging=i % 2 == 0) for i in range(limit)]
+    return [
+        Hammock(id=i, label=f"hammock-{i}", swinging=i % 2 == 0)
+        for i in range(limit)
+    ]
 
 
 async def main() -> None:
@@ -54,7 +57,8 @@ async def main() -> None:
     for hammock in swinging:
         print(f"{hammock.label:<12} {describe(hammock.mood)!r}")
 
-    print(f"{len(swinging)} of {len(hammocks)} swinging, ratio {len(swinging) / len(hammocks):.0%}")
+    ratio = len(swinging) / len(hammocks)
+    print(f"{len(swinging)}/{len(hammocks)} swinging ({ratio:.0%})")
 
 
 if __name__ == "__main__":
