@@ -106,6 +106,11 @@
         "warning": "#ebc17a",
         "warning.background": "#ebc17a20",
         "warning.border": "#ebc17a",
+        "accents": [
+          "#ebc17a",
+          "#b06698",
+          "#7eaac7"
+        ],
         "players": [
           {
             "cursor": "#d9d9d9",
@@ -138,6 +143,10 @@
             "color": "#ebc17a",
             "font_style": "italic"
           },
+          "attribute.builtin": {
+            "color": "#7eaac7",
+            "font_style": "italic"
+          },
           "boolean": {
             "color": "#b06698"
           },
@@ -150,6 +159,9 @@
             "font_style": "italic"
           },
           "constant": {
+            "color": "#d9d9d9"
+          },
+          "constant.builtin": {
             "color": "#b06698"
           },
           "constructor": {
@@ -181,6 +193,9 @@
           "function.decorator": {
             "color": "#7eaac7",
             "font_style": "italic"
+          },
+          "function.kwargs": {
+            "color": "#b06698"
           },
           "function.method": {
             "color": "#7eaac7"
@@ -289,6 +304,9 @@
           },
           "type.builtin": {
             "color": "#7eaac7"
+          },
+          "type.class.inheritance": {
+            "color": "#909d63"
           },
           "type.jsdoc": {
             "color": "#ecd3a8"
