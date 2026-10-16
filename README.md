@@ -13,6 +13,62 @@ A port of the [Relaxed theme for Visual Studio Code](https://github.com/Relaxed-
 3. Click **Install**
 4. Open the theme picker (`cmd-k cmd-t`) and select **Relaxed**
 
+## Language examples
+
+<details>
+  <summary>Screenshot: Rust</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/rs.png" alt="Screenshot: Rust">
+</details>
+
+<details>
+  <summary>Screenshot: TypeScript / React</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/tsx.png" alt="Screenshot: TypeScript / React">
+</details>
+
+<details>
+  <summary>Screenshot: Python</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/py.png" alt="Screenshot: Python">
+</details>
+
+<details>
+  <summary>Screenshot: JSON</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/json.png" alt="Screenshot: JSON">
+</details>
+
+<details>
+  <summary>Screenshot: Sass</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/scss.png" alt="Screenshot: Sass">
+</details>
+
+<details>
+  <summary>Screenshot: HTML</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/html.png" alt="Screenshot: HTML">
+</details>
+
+<details>
+  <summary>Screenshot: Markdown</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/md.png" alt="Screenshot: Markdown">
+</details>
+
+<details>
+  <summary>Screenshot: Diff</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/diff.png" alt="Screenshot: Diff">
+</details>
+
+<details>
+  <summary>Screenshot: Merge conflict</summary>
+  <p>&nbsp;</p>
+  <img src="screenshots/merge-conflict.png" alt="Screenshot: Merge conflict">
+</details>
+
 ## I don't like something
 
 If something looks funky, please [open an issue](https://github.com/Relaxed-Theme/zed-theme-relaxed/issues).
