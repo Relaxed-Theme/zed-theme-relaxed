@@ -1,0 +1,63 @@
+diff --git a/.editorconfig b/.editorconfig
+new file mode 100644
+index 0000000..e69c3a1
+--- /dev/null
++++ b/.editorconfig
+@@ -0,0 +1,5 @@
++root = true
++
++[*]
++indent_style = space
++indent_size = 2
+\ No newline at end of file
+diff --git a/hammock-list.scss b/hammock-list.scss
+index 4b1d2e7..9f0c3a8 100644
+--- a/hammock-list.scss
++++ b/hammock-list.scss
+@@ -4,10 +4,11 @@
+ // Relaxed theme showcase
+ $font-stack: "Inter", system-ui, sans-serif;
+ $base-spacing: 1rem;
+-$radius: 6px !default;
++$radius: 8px !default;
+ 
+ $moods: (
+   chill: #6a8799,
+   sleepy: #b06698,
+   focused: #909d63,
++  dreamy: #acbbd0,
+ );
+diff --git a/hammock_list.py b/hammock_list.py
+index 7c2a91f..d3e8b05 100644
+--- a/hammock_list.py
++++ b/hammock_list.py
+@@ -9,7 +9,8 @@ from enum import Enum
+ from functools import lru_cache
+ 
+-API_URL = "https://api.example.com/hammocks"
++API_URL = "https://api.example.com/v2/hammocks"
++DEFAULT_LIMIT = 10
+ SLUG_PATTERN = re.compile(r"^[a-z0-9-]+$", re.IGNORECASE)
+ 
+ 
+ class Mood(Enum):
+@@ -42,13 +43,16 @@ def describe(mood: Mood) -> str:
+             return "In the zone"
+ 
+ 
+-async def fetch_hammocks(limit: int = 10) -> list[Hammock]:
+-    await asyncio.sleep(0.5)  # pretend we are calling {API_URL}
++async def fetch_hammocks(limit: int = DEFAULT_LIMIT) -> list[Hammock]:
++    """Fetch hammocks, gently."""
++    if limit <= 0:
++        raise ValueError(f"limit must be positive, got {limit}")
++    await asyncio.sleep(0.5)
+     return [Hammock(id=i, label=f"hammock-{i}", swinging=i % 2 == 0) for i in range(limit)]
+ 
+ 
+ async def main() -> None:
+-    hammocks = await fetch_hammocks(limit=5)
++    hammocks = await fetch_hammocks()
+     swinging = [h for h in hammocks if h.swinging and h.is_valid]
+ 
+     for hammock in swinging:

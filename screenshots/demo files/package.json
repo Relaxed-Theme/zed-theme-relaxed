@@ -1,0 +1,70 @@
+{
+  "name": "hammock-list",
+  "version": "1.2.0",
+  "description": "A calm little package to showcase the Relaxed theme",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Relaxed Theme",
+    "url": "https://github.com/Relaxed-Theme"
+  },
+  "keywords": ["hammock", "relaxed", "theme", "react"],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles": "./dist/hammock-list.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run --coverage"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
+  "prettier": {
+    "semi": true,
+    "singleQuote": false,
+    "printWidth": 100,
+    "overrides": [
+      {
+        "files": ["*.scss", "*.md"],
+        "options": {
+          "printWidth": 80,
+          "proseWrap": "never"
+        }
+      }
+    ]
+  },
+  "relaxed": {
+    "moods": [
+      { "id": "chill", "color": "#6a8799", "default": true },
+      { "id": "sleepy", "color": "#b06698", "default": false },
+      { "id": "focused", "color": "#909d63", "default": false }
+    ],
+    "swing": {
+      "enabled": true,
+      "amplitude": 0.75,
+      "easing": null
+    }
+  }
+}
