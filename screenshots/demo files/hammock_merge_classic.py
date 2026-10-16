@@ -1,4 +1,4 @@
-"""A calm little module to showcase the Relaxed theme, now with merge conflicts."""
+"""A calm little module to showcase the Relaxed theme."""
 
 import asyncio
 import re
@@ -23,8 +23,6 @@ class Hammock:
     def __repr__(self) -> str:
 <<<<<<< HEAD
         return f"Hammock(id={self.id}, label={self.label!r})"
-||||||| 7c2a91f
-        return f"Hammock({self.id})"
 =======
         state = "swinging" if self.swinging else "resting"
         return f"<Hammock #{self.id:03} {self.label} ({state})>"
