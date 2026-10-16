@@ -1,0 +1,60 @@
+@use "sass:math";
+
+// Relaxed theme showcase
+$font-stack: "Inter", system-ui, sans-serif;
+$base-spacing: 1rem;
+$radius: 6px !default;
+
+$moods: (
+  chill: #6a8799,
+  sleepy: #b06698,
+  focused: #909d63,
+);
+
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin breakpoint($size) {
+  @if $size == tablet {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+%card {
+  border-radius: $radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hammock-list {
+  @extend %card;
+  font-family: $font-stack;
+  padding: $base-spacing * 1.5;
+  background: linear-gradient(135deg, #353a44 0%, #2b2f36 100%);
+
+  h2 {
+    margin: 0 0 rem(12px);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  li {
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover:not([hidden]) {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  @each $mood, $color in $moods {
+    [data-mood="#{$mood}"] {
+      border-left: 3px solid $color;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    padding: $base-spacing * 2;
+  }
+}

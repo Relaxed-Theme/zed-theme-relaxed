@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hammock List &middot; Relaxed</title>
+    <link rel="stylesheet" href="./hammock-list.css" />
+    <style>
+      :root { --accent: #6a8799; }
+      .hammock-list > li:hover { color: var(--accent); }
+    </style>
+  </head>
+  <body class="theme-relaxed">
+    <!-- A calm little page to showcase the Relaxed theme -->
+    <header id="top" role="banner">
+      <h1>Hammock List</h1>
+      <nav aria-label="Main">
+        <a href="#list" class="is-active">List</a>
+        <a href="https://example.com/docs" target="_blank" rel="noopener">Docs &rarr;</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hammock-list" aria-busy="false">
+        <h2>Today&rsquo;s hammocks</h2>
+        <ul id="list">
+          <li data-mood="chill">hammock-1 <small>(chill)</small></li>
+          <li data-mood="sleepy" hidden>hammock-2 <small>(sleepy)</small></li>
+          <li data-mood="focused">hammock-3 <em>(focused)</em></li>
+        </ul>
+      </section>
+
+      <form action="/hammocks" method="post" novalidate>
+        <label for="label">Label</label>
+        <input id="label" name="label" type="text" placeholder="hammock-4" pattern="[a-z0-9-]+" required />
+        <select name="mood">
+          <option value="chill" selected>Chill</option>
+          <option value="sleepy">Sleepy</option>
+        </select>
+        <button type="submit" disabled>Hang it up</button>
+      </form>
+
+      <template id="hammock-item">
+        <li data-mood=""><span class="label"></span></li>
+      </template>
+    </main>
+
+    <footer>&copy; 2026 Relaxed Theme &bull; Made with &#9749;</footer>
+
+    <script type="module">
+      import { fetchHammocks } from "./api.js";
+
+      const list = document.querySelector("#list");
+      const items = await fetchHammocks({ limit: 5 });
+
+      for (const { label, mood } of items) {
+        const node = document.querySelector("#hammock-item").content.cloneNode(true);
+        node.querySelector("li").dataset.mood = mood;
+        node.querySelector(".label").textContent = `${label} (${mood})`;
+        list.append(node);
+      }
+    </script>
+  </body>
+</html>
