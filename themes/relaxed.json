@@ -140,11 +140,15 @@
         "terminal.ansi.bright_white": "#f7f7f7",
         "syntax": {
           "attribute": {
-            "color": "#ebc17a",
+            "color": "#7eaac7",
             "font_style": "italic"
           },
           "attribute.builtin": {
             "color": "#7eaac7",
+            "font_style": "italic"
+          },
+          "attribute.jsx": {
+            "color": "#ebc17a",
             "font_style": "italic"
           },
           "boolean": {
@@ -245,7 +249,7 @@
             "color": "#d9d9d9"
           },
           "property": {
-            "color": "#7eaac7"
+            "color": "#d9d9d9"
           },
           "property.json_key": {
             "color": "#ebc17a"
