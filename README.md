@@ -59,13 +59,15 @@ If you would like to change something, you can either open a PR and see if we'd 
 | Functions | `#7eaac7` |
 | Strings | `#909d63` |
 | Types / Classes | `#ebc17a` |
-| Constants | `#b06698` |
+| Built-in constants (`None`, `null`, `true`) | `#b06698` |
 | Tags | `#bc5653` |
 | Comments | `#727272` |
-| Variables | `#d9d9d9` |
+| Variables, properties, `ALL_CAPS` constants | `#d9d9d9` |
 | Parameters | `#b06698` |
 | Operators | `#6a8799` |
-| Regex / Escape | `#acbbd0` |
+| Regex / Escape, SCSS variables | `#acbbd0` |
+| Markdown headings | `#ebc17a` |
+| Markdown links / URLs | `#6894c1` / `#f78c6c` |
 
 ## Related
 

@@ -226,11 +226,10 @@
             "color": "#909d63"
           },
           "link_text": {
-            "color": "#6894c1",
-            "font_style": "underline"
+            "color": "#6894c1"
           },
           "link_uri": {
-            "color": "#6894c1"
+            "color": "#f78c6c"
           },
           "number": {
             "color": "#b06698"
@@ -300,7 +299,7 @@
             "color": "#bc5653"
           },
           "title": {
-            "color": "#909d63",
+            "color": "#ebc17a",
             "font_weight": 700
           },
           "type": {
