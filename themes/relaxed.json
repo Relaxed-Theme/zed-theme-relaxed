@@ -324,6 +324,9 @@
           "variable.jsdoc": {
             "color": "#cc6666"
           },
+          "variable.other.member": {
+            "color": "#acbbd0"
+          },
           "variable.parameter": {
             "color": "#b06698"
           },
